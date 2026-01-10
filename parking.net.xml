@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-01-09T03:01:16.025049+04:00 by Eclipse SUMO netconvert 1.25.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="parking.nod.xml"/>
+        <edge-files value="parking.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="parking.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,250.00,0.00" origBoundary="0.00,0.00,250.00,0.00" projParameter="!"/>
+
+    <edge id="E1" from="n1" to="n2" priority="1">
+        <lane id="E1_0" index="0" speed="10.00" length="250.00" width="7.00" shape="0.00,-10.50 250.00,-10.50"/>
+        <lane id="E1_1" index="1" speed="10.00" length="250.00" width="7.00" shape="0.00,-3.50 250.00,-3.50"/>
+    </edge>
+
+    <junction id="n1" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-14.00"/>
+    <junction id="n2" type="dead_end" x="250.00" y="0.00" incLanes="E1_0 E1_1" intLanes="" shape="250.00,-14.00 250.00,0.00"/>
+
+</net>
