@@ -1,15 +1,22 @@
 import cv2
 import numpy as np
-import glob
 import math
 from ultralytics import YOLO
 from sklearn.cluster import DBSCAN
+import glob
 
+# --- NEW IMPORTS ---
+# We now import your helper scripts from the 'src' folder
+from src import parking
+from src import parking_visualize
+
+# --- CONFIGURATION UPDATE ---
+# Point to the new location of the model
+YOLO_MODEL = "models/yolo11n.pt"
 # --- CONFIGURATION ---
 # IMPORTANT: Put the path to your folder of images here
-DATASET_PATH = "test/*.jpg" 
+DATASET_PATH = "data/inputs/Parking_Lot_1/*.jpg" 
 
-YOLO_MODEL = "yolo11n.pt"
 
 # --- TUNING PARAMETERS ---
 CONFIDENCE_THRESHOLD = 0.4  # Slightly lower to catch cars in shadows
